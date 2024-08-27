@@ -4,14 +4,6 @@ import "../style/requerimiento.css";
 
 export default function RequerimentPage() {
   //No hace falta utilizar la logica de saber si esta autenticado aqui, porque ya lo validamos en el App.js
-
- // console.log(isAuthenticated);
-  //const navigate = useNavigate();
-  // if (!isAuthenticated) {
-  //   navigate("/");
-  // }
-
-
   return (
     <div className="requeriment">
       <div className="browser-frame">
