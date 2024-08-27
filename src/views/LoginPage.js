@@ -9,7 +9,7 @@ const initialState = {
   password: "",
 };
 
-export default function LoginPage({ setAuthenticated }) {
+export default function LoginPage({ setIsAuthenticated }) {
   const navigate = useNavigate();
 
   const [loginForm, setLoginForm] = useState(initialState);
@@ -31,7 +31,7 @@ export default function LoginPage({ setAuthenticated }) {
       toast.error("Usuario o contraseña incorrectos");
       return;
     }
-    setAuthenticated(true);
+    setIsAuthenticated(true);
     navigate("/requeriments");
     setLoginForm(initialState);
   };

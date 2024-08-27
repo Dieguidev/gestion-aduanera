@@ -1,15 +1,16 @@
 import React from "react";
 import "../style/requerimiento.css";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
-export default function RequerimentPage({authenticated}) {
-  console.log(authenticated);
-  
-  const navigate = useNavigate();
+export default function RequerimentPage() {
+  //No hace falta utilizar la logica de saber si esta autenticado aqui, porque ya lo validamos en el App.js
 
-  if (!authenticated) {
-    navigate("/");
-  }
+ // console.log(isAuthenticated);
+  //const navigate = useNavigate();
+  // if (!isAuthenticated) {
+  //   navigate("/");
+  // }
+
 
   return (
     <div className="requeriment">
@@ -25,15 +26,15 @@ export default function RequerimentPage({authenticated}) {
           <form id="requerimientoForm">
             <div className="form-row">
               <div className="form-group">
-                <label for="cliente">CLIENTE</label>
+                <label htmlFor="cliente">CLIENTE</label>
                 <input type="text" id="cliente" name="cliente" required />
               </div>
               <div className="form-group">
-                <label for="aduana">ADUANA</label>
+                <label htmlFor="aduana">ADUANA</label>
                 <input type="text" id="aduana" name="aduana" required />
               </div>
               <div className="form-group">
-                <label for="terminal">
+                <label htmlFor="terminal">
                   TERMINAL PORTUARIO / DEPÓSITO TEMPORAL
                 </label>
                 <input type="text" id="terminal" name="terminal" required />
@@ -41,15 +42,15 @@ export default function RequerimentPage({authenticated}) {
             </div>
             <div className="form-row">
               <div className="form-group">
-                <label for="customer">CUSTOMER</label>
+                <label htmlFor="customer">CUSTOMER</label>
                 <input type="text" id="customer" name="customer" required />
               </div>
               <div className="form-group">
-                <label for="regimen">RÉGIMEN</label>
+                <label htmlFor="regimen">RÉGIMEN</label>
                 <input type="text" id="regimen" name="regimen" required />
               </div>
               <div className="form-group">
-                <label for="observaciones">OBSERVACIONES</label>
+                <label htmlFor="observaciones">OBSERVACIONES</label>
                 <textarea
                   id="observaciones"
                   name="observaciones"
@@ -68,7 +69,7 @@ export default function RequerimentPage({authenticated}) {
                 <h3>DOCUMENTOS</h3>
                 <div className="file-upload-group">
                   <div className="file-upload">
-                    <label for="factura">FACTURA COMERCIAL</label>
+                    <label htmlFor="factura">FACTURA COMERCIAL</label>
                     <input
                       type="file"
                       id="factura"
@@ -77,7 +78,7 @@ export default function RequerimentPage({authenticated}) {
                     />
                   </div>
                   <div className="file-upload">
-                    <label for="packing">PACKING LIST</label>
+                    <label htmlFor="packing">PACKING LIST</label>
                     <input
                       type="file"
                       id="packing"
@@ -86,7 +87,7 @@ export default function RequerimentPage({authenticated}) {
                     />
                   </div>
                   <div className="file-upload">
-                    <label for="traduccion">TRADUCCIÓN DE FACTURA</label>
+                    <label htmlFor="traduccion">TRADUCCIÓN DE FACTURA</label>
                     <input
                       type="file"
                       id="traduccion"
@@ -95,7 +96,7 @@ export default function RequerimentPage({authenticated}) {
                     />
                   </div>
                   <div className="file-upload">
-                    <label for="transporte">DOCUMENTO DE TRANSPORTE</label>
+                    <label htmlFor="transporte">DOCUMENTO DE TRANSPORTE</label>
                     <input
                       type="file"
                       id="transporte"
@@ -104,7 +105,7 @@ export default function RequerimentPage({authenticated}) {
                     />
                   </div>
                   <div className="file-upload">
-                    <label for="origen">CERTIFICADO DE ORIGEN</label>
+                    <label htmlFor="origen">CERTIFICADO DE ORIGEN</label>
                     <input
                       type="file"
                       id="origen"
@@ -113,7 +114,7 @@ export default function RequerimentPage({authenticated}) {
                     />
                   </div>
                   <div className="file-upload">
-                    <label for="poliza">PÓLIZA</label>
+                    <label htmlFor="poliza">PÓLIZA</label>
                     <input
                       type="file"
                       id="poliza"
@@ -122,7 +123,7 @@ export default function RequerimentPage({authenticated}) {
                     />
                   </div>
                   <div className="file-upload">
-                    <label for="control">DOCUMENTOS DE CONTROL</label>
+                    <label htmlFor="control">DOCUMENTOS DE CONTROL</label>
                     <input
                       type="file"
                       id="control"
@@ -131,7 +132,7 @@ export default function RequerimentPage({authenticated}) {
                     />
                   </div>
                   <div className="file-upload">
-                    <label for="otros">OTROS</label>
+                    <label htmlFor="otros">OTROS</label>
                     <input
                       type="file"
                       id="otros"
