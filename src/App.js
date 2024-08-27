@@ -15,8 +15,7 @@ function App() {
         <Route path="/requeriments" element={<RequerimentPage authenticated={authenticated}/>} />
       </Routes>
     </BrowserRouter>
-    //<LoginPage/>
-    // <RequerimentPage/>
+
   );
 }
 
