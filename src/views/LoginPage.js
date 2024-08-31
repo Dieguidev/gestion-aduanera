@@ -9,10 +9,11 @@ const initialState = {
   password: "",
 };
 
-export default function LoginPage({ setIsAuthenticated }) {
+export default function LoginPage({ setIsAuthenticated, setUserAthenticated }) {
   const navigate = useNavigate();
 
   const [loginForm, setLoginForm] = useState(initialState);
+
 
   const handleChange = (e) => {
     setLoginForm({
@@ -31,6 +32,8 @@ export default function LoginPage({ setIsAuthenticated }) {
       toast.error("Usuario o contraseña incorrectos");
       return;
     }
+    setUserAthenticated(isUser);
+    
     setIsAuthenticated(true);
     navigate("/requeriments");
     setLoginForm(initialState);
@@ -53,7 +56,7 @@ export default function LoginPage({ setIsAuthenticated }) {
                 alt="Grupo S&S Logo"
                 className="logo"
               />
-              <h2>OPERADOR DE COMERCIO EXTERIOR EN LÍNEA</h2>
+              <h2 className="login-title">OPERADOR DE COMERCIO EXTERIOR EN LÍNEA</h2>
               <form id="loginForm" onSubmit={handleSubmit}>
                 <input
                   type="text"

@@ -4,19 +4,22 @@ import RequerimentPage from "./components/RequerimentPage";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 
+
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [userAthenticated, setUserAthenticated] = useState({})
   return (
     <BrowserRouter>
       <Routes>
         <Route
           path="/"
-          element={<LoginPage setIsAuthenticated={setIsAuthenticated} />}
+          element={<LoginPage setIsAuthenticated={setIsAuthenticated} setUserAthenticated={setUserAthenticated}/>}
         />
         <Route
           path="/requeriments"
           element={
-            isAuthenticated ? <RequerimentPage /> : <Navigate to="/" replace />
+            isAuthenticated ? <RequerimentPage userAthenticated={userAthenticated} /> : <Navigate to="/" replace />
           }
         />
       </Routes>
