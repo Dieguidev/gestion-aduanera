@@ -13,7 +13,7 @@ export const users = [
     name: "Orlando",
     lastName: "Zavala",
     password: "1234",
-    email: "orladno@gmail.com",
+    email: "orlando@gmail.com",
     client: "Nissan",
     customer: "CUSTOMER 2",
   },
