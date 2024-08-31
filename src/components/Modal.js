@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../style/modal.css";
-import { toast, ToastContainer } from "react-toastify";
+
 
 export default function Modal({
   isVisible,
@@ -31,9 +31,9 @@ export default function Modal({
       regimen: "",
     });
 
-    toast.success("Requerimiento creado con éxito");
     setOrderNumber(randomFourDigits());
     onClose();
+    alert("Orden de requerimiento generada con éxito");
   };
 
   if (!isVisible) return null;
@@ -124,7 +124,6 @@ export default function Modal({
           </button>
         </div>
       </div>
-      <ToastContainer pauseOnHover={false} pauseOnFocusLoss={false} />
     </div>
   );
 }
