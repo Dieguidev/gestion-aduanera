@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../style/modal.css";
 
-
 export default function Modal({
   isVisible,
   onClose,
@@ -31,9 +30,9 @@ export default function Modal({
       regimen: "",
     });
 
-    setOrderNumber(randomFourDigits());
     onClose();
-    alert("Orden de requerimiento generada con éxito");
+    alert(`Orden ${orderNumber} de requerimiento generada con éxito`);
+    setOrderNumber(randomFourDigits());
   };
 
   if (!isVisible) return null;
